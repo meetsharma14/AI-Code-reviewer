@@ -1,9 +1,0 @@
-fastapi
-uvicorn
-streamlit
-requests
-joblib
-scikit-learn
-radon
-bandit
-pydantic
