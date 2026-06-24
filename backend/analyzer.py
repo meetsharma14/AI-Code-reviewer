@@ -4,6 +4,7 @@ import ast
 import tempfile
 import subprocess
 import ast
+import sys
 # Radon is used to calculate cyclomatic complexity
 
 from radon.complexity import cc_visit
@@ -83,7 +84,7 @@ def security_scan(code):
             temp_path = temp.name
 
         result = subprocess.run(
-            ["py", "-m", "bandit", temp_path],
+            [sys.executable, "-m", "bandit", temp_path],
             capture_output=True,
             text=True
         )
