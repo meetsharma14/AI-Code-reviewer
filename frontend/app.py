@@ -7,7 +7,7 @@ code = st.text_area("Paste your code here")
 
 if st.button("Review Code"):
     response = requests.post(
-        "http://127.0.0.1:8000/review",
+        "https://ai-code-reviewer-gscg.onrender.com/review",
         json={"code": code}
     )
 
